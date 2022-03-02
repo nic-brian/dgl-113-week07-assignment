@@ -10,9 +10,10 @@ class Car {
     // write the code here to complete this class
     // you need:
     // - a constructor that takes 4 parameters:
-    //   make, model, fuel, and distance
+    //   make, model, distance, and fuel
     // - a fuelEfficiency() method that returns the
     //   fuel efficiency of this car in L/100km
+    //   the formula for fuel efficiency is fuel * 100 / distance
     // - a toTableRow() method that returns a string
     //   that is a <tr> element with the make, model,
     //   fuel, distance, and fuel efficiency of this car

@@ -7,8 +7,8 @@ describe("index.html", () => {
     await page.goto(URL);
   });
 
-  it("click show words", async () => {
-    await page.evaluate(() => setWords(
+  it("click show cars", async () => {
+    await page.evaluate(() => setCars(
       new Car( 'Hyundai', 'Pony', 200, 20 ),
       new Car( 'Ford', 'F150', 400, 80 )
     ));
@@ -17,6 +17,6 @@ describe("index.html", () => {
     await page.waitForSelector('#cars');
     let element = await page.$('#cars');
     let value = await page.evaluate(el => el.innerText, element);
-    expect(value).toBe( 'bed\nFred\nedict' );
+    expect(value).toBe( 'Hyundai\tPony\t20\t200\t10\nFord\tF150\t80\t400\t20' );
   });
 });
